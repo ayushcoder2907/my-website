@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Cricket Score Manager</title>
+  <link rel="stylesheet" href="score.css"/>
+</head>
+<body>
+
+  <!-- Match Setup Screen -->
+  <div id="setup" class="setup-container">
+    <h1>Match Setup</h1>
+    <label>Team 1 Name: <input id="team1" /></label>
+    <label>Team 1 Players (comma-separated): <input id="team1Players" /></label>
+    
+    <label>Team 2 Name: <input id="team2" /></label>
+    <label>Team 2 Players (comma-separated): <input id="team2Players" /></label>
+    
+    <label>Total Overs: <input type="number" id="overs" min="1" max="50"/></label>
+    
+    <button id="proceedToss">Next: Toss</button>
+  </div>
+
+  <!-- Toss Screen -->
+  <div id="tossScreen" class="setup-container hidden">
+    <h2>Select Batting Team</h2>
+    <button id="chooseTeam1Bat"></button>
+    <button id="chooseTeam2Bat"></button>
+  </div>
+
+  <!-- Live Match Screen -->
+  <div id="live" class="live-container hidden">
+    <h2 id="matchTitle"></h2>
+    <div class="scoreboard">
+      <div class="team-score">
+        <h3>Score: <span id="score">0/0</span></h3>
+        <h4>Overs: <span id="overCount">0.0</span></h4>
+      </div>
+      <div class="batsmen">
+        <h3>Batsmen</h3>
+        <ul id="batsmenList"></ul>
+      </div>
+      <div class="bowler">
+        <h3>Bowler</h3>
+        <ul id="bowlerStats"></ul>
+      </div>
+    </div>
+
+    <div id="matchResult"></div>
+
+    <div class="actions">
+      <div id="runButtons"></div>
+      <label>Is Wicket: <input id="isWicket" type="checkbox" /></label>
+      <button id="submitBall">Submit Ball</button>
+      <button id="undoBall">Undo Last Ball</button>
+
+    </div>
+
+    <button id="viewScorecard">View Scorecard</button>
+    <button id="exportScorecard">Download Scorecard</button>
+<button id="resetMatch">Reset Match</button>
+
+  </div>
+
+  <!-- Scorecard View -->
+  <div id="scorecard" class="scorecard-container hidden">
+    <h2>Full Scorecard</h2>
+    <div id="fullScorecard"></div>
+    <button id="backToLive">Back to Live</button>
+  </div>
+
+  <!-- Match End Screen -->
+  <div id="matchEnd" class="setup-container hidden">
+    <h2 id="finalResultText"></h2>
+    <button onclick="location.reload()">Restart Match</button>
+  </div>
+
+  <!-- MODAL: Select New Batsman -->
+  <div id="batsmanModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select New Batsman</h3>
+      <div id="batsmanOptions"></div>
+    </div>
+  </div>
+
+  <!-- MODAL: Select New Bowler -->
+  <div id="bowlerModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Select New Bowler</h3>
+      <div id="bowlerOptions"></div>
+    </div>
+  </div>
+
+  <script src="score.js"></script>
+</body>
+</html>

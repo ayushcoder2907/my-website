@@ -1,0 +1,175 @@
+/* Dark Cricbuzz-style Theme */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Containers */
+.setup-container,
+.live-container,
+.scorecard-container,
+#matchEnd {
+  max-width: 600px;
+  background: #1f1f1f;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+h1, h2, h3, h4 {
+  color: #a8ff60;
+}
+
+/* Inputs & Labels */
+label {
+  display: block;
+  margin: 10px 0;
+  color: #eeeeee;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  background: #2c2c2c;
+  border: 1px solid #555;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background-color: #0a7e07;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0c9b0c;
+}
+
+/* Run Buttons */
+#runButtons {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#runButtons button {
+  width: 40px;
+  margin: 5px;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+#runButtons button:hover {
+  background-color: #0056b3;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Result Display */
+#matchResult {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #00ff88;
+  margin: 10px 0;
+}
+
+#finalResultText {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffca28;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px limegreen;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.modal-content button {
+  margin: 5px;
+  width: auto;
+  padding: 8px 15px;
+  background-color: #1cbf3f;
+  color: white;
+}
+
+.modal-content button:hover {
+  background-color: #148d2e;
+}
+
+/* Hidden Class Fix */
+.hidden {
+  display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .setup-container,
+  .live-container,
+  .scorecard-container {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  #runButtons button {
+    width: 36px;
+    font-size: 14px;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+}
